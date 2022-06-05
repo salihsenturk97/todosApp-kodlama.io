@@ -1,0 +1,34 @@
+<div *ngIf="loaded==false" class="spinner-border text-success" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">User Id</th>
+      <th scope="col">Title</th>
+      <th scope="col">Completed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let todo of todos">
+      <th scope="row">{{todo.id}}</th>
+      <td>{{todo.userId}}</td>
+       <td>{{todo.title}}</td>
+
+
+
+      <td *ngIf="true==todo.completed">
+        <button type="button" class="btn btn-success">{{todo.completed}}</button>
+      </td>
+      <td *ngIf="false==todo.completed">
+        <button type="button" class="btn btn-danger">{{todo.completed}}</button>
+
+
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>

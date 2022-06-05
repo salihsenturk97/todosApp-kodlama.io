@@ -1,0 +1,19 @@
+
+
+
+<div class="container">
+  <div class="row">
+
+  <div class="col-md-3" *ngFor="let data of photos">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{data.thumbnailUrl}}">
+      <div class="card-body">
+        <h5 class="card-title">ID : {{data.id}}</h5>
+        <p class="card-text">{{data.title}}</p>
+        <a href="{{data.url}}" class="btn btn-primary">Siteye Git</a>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  </div>
